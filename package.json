@@ -4,9 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/index.js",
+    "dev": "backpack"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "backpack-core": "^0.8.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "koa": "^2.7.0",
+    "koa-body": "^4.0.8",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cors": "0.0.16",
+    "koa-morgan": "^1.0.1"
+  },
+  "devDependencies": {
+    "koa-router": "^7.4.0"
+  }
 }
