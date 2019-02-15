@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "dev": "backpack"
+    "start": "backpack build && node ./src/index.js",
+    "dev": "backpack",
+    "build": "backpack build"
   },
   "keywords": [],
   "author": "",
