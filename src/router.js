@@ -22,7 +22,7 @@ async function main(mailObject) {
       //   user: account.user, // generated ethereal user
       //   pass: account.pass, // generated ethereal password
       user: 'xpom66nikita004@mail.ru', // generated ethereal user
-      pass: '1qaz', // generated ethereal password
+      pass: '1qazxsw2', // generated ethereal password
     },
   });
 
