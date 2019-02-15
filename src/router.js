@@ -1,9 +1,9 @@
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
 
-// import Email from 'email-templates';
+// heroku keep await => https://uptimerobot.com/dashboard#781986023
+
 const nodemailer = require('nodemailer');
-// const nodemailerSendgrid = require('nodemailer-sendgrid');
 
 const router = new Router();
 
@@ -52,7 +52,7 @@ router.post('/', bodyParser(), async (ctx) => {
 
   const { body } = ctx.request;
   //   sendEmail();
-  main(body).catch(console.error);
+  await main(body).catch(console.error);
 
   console.log('request', body);
 

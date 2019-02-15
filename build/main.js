@@ -135,10 +135,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var koa_bodyparser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! koa-bodyparser */ "koa-bodyparser");
 /* harmony import */ var koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(koa_bodyparser__WEBPACK_IMPORTED_MODULE_1__);
 
- // import Email from 'email-templates';
+ // heroku keep await => https://uptimerobot.com/dashboard#781986023
 
-const nodemailer = __webpack_require__(/*! nodemailer */ "nodemailer"); // const nodemailerSendgrid = require('nodemailer-sendgrid');
-
+const nodemailer = __webpack_require__(/*! nodemailer */ "nodemailer");
 
 const router = new koa_router__WEBPACK_IMPORTED_MODULE_0___default.a(); // async..await is not allowed in global scope, must use a wrapper
 
@@ -189,7 +188,7 @@ router.post('/', koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()(), async 
     body
   } = ctx.request; //   sendEmail();
 
-  main(body).catch(console.error);
+  await main(body).catch(console.error);
   console.log('request', body);
   const data = {
     allGood: true
