@@ -47,7 +47,8 @@ async function main(mailObject) {
 }
 
 // curl -H "Content-Type: application/json" -X POST --data '{"value": "30"}' http://localhost:3334
-router.post('/', bodyParser(), async (ctx) => {
+// TODO: '/'  было
+router.post('/route', bodyParser(), async (ctx) => {
   console.log('asdfl alskdfj laskjdf test');
 
   const { body } = ctx.request;
@@ -59,6 +60,11 @@ router.post('/', bodyParser(), async (ctx) => {
   const data = { allGood: true };
   ctx.status = 200;
   ctx.body = JSON.stringify({ data });
+});
+
+router.get('/', (ctx) => {
+  ctx.status = 200;
+  ctx.body = '* Hello Nikita!!!';
 });
 
 export default router;
