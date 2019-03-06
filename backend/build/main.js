@@ -180,9 +180,10 @@ async function main(mailObject) {
   console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info)); // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 } // curl -H "Content-Type: application/json" -X POST --data '{"value": "30"}' http://localhost:3334
+// TODO: '/'  было
 
 
-router.post('/', koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()(), async ctx => {
+router.post('/route', koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()(), async ctx => {
   console.log('asdfl alskdfj laskjdf test');
   const {
     body
@@ -197,6 +198,10 @@ router.post('/', koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()(), async 
   ctx.body = JSON.stringify({
     data
   });
+});
+router.get('/', ctx => {
+  ctx.status = 200;
+  ctx.body = '* Hello Nikita!!!';
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 

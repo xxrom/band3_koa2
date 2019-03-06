@@ -61,4 +61,9 @@ router.post('/', bodyParser(), async (ctx) => {
   ctx.body = JSON.stringify({ data });
 });
 
+router.get('/hello', (ctx) => {
+  ctx.status = 200;
+  ctx.body = '* Hello Nikita from docker 2!!!';
+});
+
 export default router;
