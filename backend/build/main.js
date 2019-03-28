@@ -180,15 +180,14 @@ async function main(mailObject) {
   console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info)); // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 } // curl -H "Content-Type: application/json" -X POST --data '{"value": "30"}' http://localhost:3334
-// TODO: '/'  было
 
 
-router.post('/route', koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()(), async ctx => {
+router.post('/', koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()(), async ctx => {
   console.log('asdfl alskdfj laskjdf test');
   const {
     body
-  } = ctx.request; //   sendEmail();
-
+  } = ctx.request;
+  console.log('body', body);
   await main(body).catch(console.error);
   console.log('request', body);
   const data = {
@@ -199,9 +198,9 @@ router.post('/route', koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()(), a
     data
   });
 });
-router.get('/', ctx => {
+router.get('/hello', ctx => {
   ctx.status = 200;
-  ctx.body = '* Hello Nikita!!!';
+  ctx.body = '* Hello Nikita from docker 2!!!';
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 
@@ -214,7 +213,7 @@ router.get('/', ctx => {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nikita/Desktop/js/tests/band3_koa2/src/index.js */"./src/index.js");
+module.exports = __webpack_require__(/*! /Users/nikita/Desktop/js/tests/band3_koa2/backend/src/index.js */"./src/index.js");
 
 
 /***/ }),
