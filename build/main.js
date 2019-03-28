@@ -156,7 +156,7 @@ async function main(mailObject) {
       //   pass: account.pass, // generated ethereal password
       user: 'xpom66nikita004@mail.ru',
       // generated ethereal user
-      pass: '1qazxsw2' // generated ethereal password
+      pass: '1qazxsw2WSXZAQ!QAZXSW@' // generated ethereal password
 
     }
   }); // setup email data with unicode symbols
@@ -197,6 +197,10 @@ router.post('/', koa_bodyparser__WEBPACK_IMPORTED_MODULE_1___default()(), async 
   ctx.body = JSON.stringify({
     data
   });
+});
+router.get('/hello', ctx => {
+  console.log('hello');
+  ctx.body = 'hello nikita';
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 

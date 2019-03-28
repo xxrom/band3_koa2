@@ -61,4 +61,10 @@ router.post('/', bodyParser(), async (ctx) => {
   ctx.body = JSON.stringify({ data });
 });
 
+router.get('/hello', (ctx) => {
+  console.log('hello');
+
+  ctx.body = 'hello nikita';
+});
+
 export default router;
