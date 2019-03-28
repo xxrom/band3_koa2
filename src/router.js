@@ -51,7 +51,6 @@ router.post('/', bodyParser(), async (ctx) => {
   console.log('asdfl alskdfj laskjdf test');
 
   const { body } = ctx.request;
-  //   sendEmail();
   await main(body).catch(console.error);
 
   console.log('request', body);
